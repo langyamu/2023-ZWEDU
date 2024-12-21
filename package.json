@@ -1,9 +1,8 @@
 {
   "name": "learn-2023-zwedu",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/langyamu/_learn-2023-ZWEDU",
-  "author": "langyamu <1764714737@qq.com>",
+  "author": "langyamu",
   "license": "MIT",
   "scripts": {
     "cz":"git add . && git cz"
