@@ -13,5 +13,10 @@
   },
   "dependencies": {
     "http-server": "^14.1.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   }
 }
