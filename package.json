@@ -5,9 +5,13 @@
   "author": "langyamu",
   "license": "MIT",
   "scripts": {
-    "cz":"git add . && git cz"
+    "start": "http-server ./",
+    "cz": "git add . && git cz"
   },
   "devDependencies": {
     "cz-git": "^1.11.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
   }
 }

@@ -7,16 +7,6 @@ const issue = execSync('git rev-parse --abbrev-ref HEAD')
   .split('_')[1]
 
 
-// precomputed scope
-const scopeComplete = execSync('git status --porcelain || true')
-  .toString()
-  .trim()
-  .split('\n')
-  .find((r) => ~r.indexOf('M  src'))
-  ?.replace(/(\/)/g, '%%')
-  ?.match(/src%%((\w|-)*)/)?.[1];
-
-
 /** @type {import('cz-git').UserConfig} */
 module.exports = {
   rules: {
@@ -139,8 +129,7 @@ module.exports = {
       { value: 'other', name: 'other:         其他修改' },
     ],
     useEmoji: true,
-    defaultScope: scopeComplete,
-    customScopesAlign: !scopeComplete ? 'top-bottom' : 'bottom',
+    customScopesAlign:'top-bottom' ,
     customScopesAlias: 'custom:        以上都不是？我要自定义',
     allowBreakingChanges: ['feat', 'fix'],
     issuePrefixs: [
