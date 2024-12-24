@@ -1,3 +1,4 @@
+// View
 document.body.insertAdjacentHTML('afterbegin',
     `
 <div id="app">
@@ -12,14 +13,18 @@ document.body.insertAdjacentHTML('afterbegin',
 `
 )
 
+// Model
+const data = function (){
+    return {
+        val:0
+    }
+}
+
+// View Model
 new Vue(
     {
         el: '#app',
-        data() {
-            return {
-                val: 0
-            }
-        },
+        data,
         methods: {
             sub() {
                 if(this.val > 0)
